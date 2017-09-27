@@ -1,0 +1,70 @@
+#Introduccion a R-Markdown
+Veamos algunos comandos sencillos:
+
+- Cambiando el estilo de una palabra u oracion a bold e/y italic.
+
+*Aqui estoy escribiendo en cursiva(italic)*
+**Aqui estoy escribiendo en negrita(bold)**
+***Aqui tomamos ambos casos***
+
+- Alterando el tamaño de una palabra u oracion usando "#"
+
+# Tamaño 1
+## Tamaño 2
+### Tamaño 3
+#### Tamaño 4
+
+- Accesando directamente a links
+
+En este caso usaremos los "[ ]" encerrando lo que sera visible en R-Markdown y "( )" el link que mandara directamente a la pagina
+
+[Ingresar a mi pagina de Github..](https://github.com/Carlos-Chauca/CursoR)
+Tambien se puede hacer resaltar esto dandole un estilo bold o haciendolo un heading usando el comando "#"
+[**Ingresar a mi pagina de Github..**](https://github.com/Carlos-Chauca/CursoR)
+
+- Accediendo a imagenes (Ejemplo tomado de la pagina del github)
+
+[Benjamin Bannekat](https://octodex.github.com/images/bannekat.png)
+
+- Creando bloques
+
+Esto es mas sencillo y sirve para llamar la atencion a algun tema que se quiera resaltar
+
+> Aqui escribiendo
+
+>en Markdown
+
+>resaltando este bloque.
+
+No existia la necesidad de escribir tantas veces el simbolo ">", basta hacerlo una vez con una frase continua, ademas que estos caracteres pueden ser alterados, como escribir teto en bold, links, etc.
+
+
+- Listas
+
+Para crear listas se necessita escribir "*" antes de alguna frase, veamos una lista de frutas.
+
+* Manzana
+* Pera
+* Platano
+* Fresa
+
+Otro caso de listas seria enumerarlas, ademas de resaltar alguna escribiendola en negrita, etc.
+
+1. **Manzana**
+2. Pera
+3. **Platano**
+4. Fresa
+
+Para resaltar una sublista bastaria con hacer un espacio (usando "*"), analogo se puede hacer al enumerarlas.
+
+* Frutas vendidas:
+	* Manzana
+	* Pera
+	* Platano
+	* Fresa
+
+Esisten aun mas temas para hablar, pero eso lo dejamos como tarea para el lector.
+
+
+	
+
