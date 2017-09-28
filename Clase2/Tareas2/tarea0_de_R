@@ -1,0 +1,114 @@
+# Tarea 2
+
+## Parte 1
+
+- Experimentando con algunos comandos:
+
+* "echo hello world" es un comando que solo escribe en la consola la frase "hello world".
+* "passwd" es un comando para cambiar la contraseña del usuario.
+* "date" te da la fecha actual (hora, etc).
+* "hostname" te da el nombre de tu host.
+* "arch" te muestra la distribución GNU/Linux.
+* "uname -a" imprime toda la informacion del sistema y el ordenador.
+* "uptime" te dice cuanto tiempo el sistema ha estado corriendo (o ejecutandose).
+* "who am i" te muestra el nombre del usuario.
+* "who"te muestra el nombre de los usuarios conectados, el tiempo conectado y el nombre del host.
+* "id" muestra el identificador actual de los usuarios.
+* "last" muestra los usuarios que ingresaron al sistema(con fecha, etc).
+* "finger" es un comando que muestra el nombre de acceso al usuario, nombre real, nombre del terminal y el estado de escritura.
+* "w" muestra quien esta logueado(o tiene acceso al sistema) y que esta haciendo.
+* "top" muestra todos los procesos en ejecutandose en el sistema en tiempo real.
+
+
+## Parte 2
+
+* Pasos
+	* Usamos "cd .." hasta ubicarnos en el directorio home.
+	* Ingresamos el comando "sudo mkdir a1" con su contraseña, asimismo para a2.
+	* Copiamos el archivo passwd ubicado en el directorio /etc mediante "sudo cp /etc/passwd a1"
+	* Al escribir "find /home" se accesa a todos los archivos (con su ruta en directorio) del directorio home.
+	* Para locate usamos "locate -b "\commands" para hallar los (sub)directorios que contengan la palabra commands.
+
+
+## Parte 3
+#!/bin/sh
+for f in $*
+do
+  if [ -f  $f -a  ! -x  $f ]
+  then
+    case $f in
+    core)
+      echo "$f: archivo de memoria"
+      ;;
+    *.c)
+     echo "$f: un programa en C"
+      ;;
+    *.cpp|*.cc|*.cxx)
+      echo "$f: un programa en C+"
+      ;;
+    *.txt)
+      echo "$f: un archivo de texto"
+      ;;
+    *.pl)
+      echo "$f: un script de Perl"
+      ;;
+    *.html|*.htm)
+      echo "$f: un documento web"
+      ;;
+    *)
+      echo "$f: aparece ser  "`file -b $f`
+      ;;
+    esac
+  fi
+done
+
+El siguiente script se encarga de revisar la terminacion de un archivo y verificar a que grupo pertenece(si es un archivo en C, C++, etc).
+
+
+
+## Parte 4
+
+#!/bin/sh
+# este es un comentario
+echo "El numero de argumentos es  $#"
+echo "Los argumentos son $*"
+echo "El primero es $1"
+echo "Mi numero de proceso es  $$"
+echo "Ingresa un numero desde el teclado: "
+read numero
+echo "El numero que has ingresado es $numero"
+
+El siguiente script te pide ingresar un numero por teclado y solamente lo lee. Para ejecutarlo se realiza lo siguiente:
+
+* ls -l bash_script
+* chmod +x bash_script
+* ls -l bash_script
+* ./bash_script hola a todos
+
+
+
+## Parte 5
+
+* "cd" te envia directamente hacia el directorio de usuario: /home/nombre_de_usuario.
+* "pwd" te encuentras en /home/Carlos (este es mi caso).
+* "ls -al" te muestra todos los contenidos de los directorios ubicados en /home/Carlos.
+* "cd ." en este caso no ejecuta nada.
+* "pwd" te encuentras en /home/Carlos.
+* "cd .." en este caso se dirige al directorio padre o anterior, en este caso home.
+* "pwd" te encuentras en /home.
+* "ls -al" te muestra todos los directorios ubicados en /home ( "Carlos" , "." , "..").
+* "cd .." en este caso se dirige al directorio raiz.
+* "pwd" te encuentras en / (directorio raiz).
+* "ls -al" te muestra los directorios etc, home, lib, tmp, etc los cuales son los directorios ubicados bajo la raiz.
+* "cd .." en este caso no hay lugar al cual retroceder.
+* "pwd" te encuentras en / (directorio raiz).
+* "cd /etc" ingresas al directorio etc.
+* "ls -al | more" te lista todos los contenidos de los directorios ubicados en /etc y mas.
+* "cat passwd" imprime el contenido en el archivo passwd.
+* "cd -" te regresa al ultimo directorio en donde te encontrabas, en este caso el directorio raiz /.
+* "pwd" te encuentras en / (directorio raiz).
+
+
+
+
+
