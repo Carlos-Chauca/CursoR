@@ -1,0 +1,22 @@
+Nombre : Carlos Renato Chauca Prinque 20140231J
+Respuesta 2: Comentarios
+
+### Ejercicio 2:
+* Define que significa que una funcion R pueda ser vectorizada o que cumple la vectorización. Justifica con ejemplos de R.
+Al tomar un vector cualquiera (bien cumple para una funcion tambien), si este se le opera por una variable, esta variable 
+actuaria como un vector, por tanto se dice que se cumple la vectorización
+
+```sh
+ c(4,2,6,9) + 1 
+```
+Esto se debe entender que se sumara (por reciclaje) **c(4,2,6,9)+c(1,1,1,1)**.
+
+* Define que significa que una funcion obedezca la regla de reciclaje. Justifica tu respuesta.
+R tiene implementado por defecto que al operar dos vectores de distinta longitud, R automaticamente repite el vector mas corto
+hasta que se iguale con el mas grande, de preferencia el la longitude del vector de menor longitud deben ser multiplo del de 
+mayor longitud.
+```sh
+ c(4,2,6,9) + c(5,3) 
+```
+Esto se debe entender que se sumara (por reciclaje) **c(4,2,6,9)+c(5,3,5,3)**.
+
