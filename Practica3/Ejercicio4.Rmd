@@ -1,0 +1,37 @@
+Nombre : Carlos Renato Chauca Prinque 20140231J
+Respuesta 4: 
+
+# Ejercicio 4:
+
+### a)
+El siguiente codigo ejecuta una funcion sin necesidad de llamar a alguna variable, dado que "y<-1;2", la suma siempre sera 3:
+```sh
+f1 <- function(x = {y <- 1;2}, y = 0){
+    x + y
+}
+f1()
+```
+
+### b)
+Aqui se tiene que observar la variable que permite la equivalencia entre estas dos funciones "trim", es una variable de la funcion mean, definida por defecto en 0, al aplicarla en la 4ta linea, resalta x = x, x toma el valor del vector asignado, pero en la 3ra linea, este llama a una variable trim que modifica la funcion mean original indicando que esta igualdad se dara implicitamente en la funcion "mean". 
+```sh
+trims <- c( 0, 0.1, 0.2 , 0.5 )
+x<- rcauchy( 100 )
+lapply( trims, function(trim) mean(x, trim = trim) )
+lapply( trims, mean, x = x )
+```
+
+### c)
+```sh
+x<-matrix(c(1:5,NA,7:16),8,2) #asignamos un valor NA intencional el 1er elemento de la fila 6
+print("# de filas que no contienen ningun elemento NA")
+for(i in 1:nrow(x)){
+    if(sum(as.numeric(lapply(x[i,],is.na))) == 0 ){
+        print(i)
+    }
+}
+# observamos que imprime los indices 1 al 8 excepto el 6
+```
+
+### d)
+Se denomina de acuerdo a los parametros ingresados en este (limites).
