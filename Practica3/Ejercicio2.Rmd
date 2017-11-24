@@ -1,0 +1,33 @@
+Nombre : Carlos Renato Chauca Prinque 20140231J
+Respuesta 2: 
+
+# Ejercicio 2:
+### a)
+```sh
+# los valores de la fila -1 no esta definido dentro de "mtcars".
+mtcars[0:4,] 
+# Falto agregar la "," para imprimir los mtcars que cumplen esta condicion.
+mtcars[mtcars$cyl <= 5,]
+# Al igual que una funcion if, se indican las 2 condiciones.
+mtcars[mtcars$cyl == 4 | mtcars$cyl == 6, ]
+```
+
+### b)
+Adopta la longitud del vector inicial tomando solo valores NA
+
+### c)
+```sh
+# Produce un error dado que supera el numero de columnas que posee "mtcars" (11 columnas)
+# aunque toma todos los valores de las filas de cada columna 
+mtcars[1:20] 
+# Aqui se toma solo los 20 primeros valores(filas) de todas las columnas (las cuales 
+# no se especifican por tanto toma todas las que existen).
+mtcars[1:20,]
+```
+
+### d)
+"df" es la funcion de distribucion, como no se han especificado valores a esta, la parte:
+```sh
+df[is.na(df)]<-0
+```
+no esta correctamente definida.
